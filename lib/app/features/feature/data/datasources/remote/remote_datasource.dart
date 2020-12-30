@@ -1,9 +1,7 @@
 import 'package:dartz/dartz.dart';
+import 'package:flutter_boilerplate_project/app/features/feature/data/api/api.dart';
 import 'package:meta/meta.dart';
 import 'package:dio/dio.dart';
-
-import 'package:flutter_boilerplate_project/app/data/api/api.dart';
-import 'package:flutter_boilerplate_project/app/core/errors/failure.dart';
 
 const ERROR_MSG = 'Something went wrong';
 

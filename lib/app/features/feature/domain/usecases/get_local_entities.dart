@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
-import '../../core/errors/failure.dart';
-import '../../core/usecases/usecase.dart';
+import 'package:flutter_boilerplate_project/app/core/errors/failure.dart';
+import 'package:flutter_boilerplate_project/app/core/usecases/usecase.dart';
+
 import '../entities/entitiy.dart';
 import '../repositories/repository.dart';
 
