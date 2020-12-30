@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_boilerplate_project/app/config/config.dart';
+import 'package:flutter_boilerplate_project/app/config/app_config.dart';
 
 import 'app/routes/app_routes.dart';
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: Config.APP_NAME,
+      title: AppConfig.APP_NAME,
       theme: ThemeData.light(),
       themeMode: ThemeMode.light,
       home: Container(),
