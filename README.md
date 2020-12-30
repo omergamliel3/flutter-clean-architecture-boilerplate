@@ -1,11 +1,5 @@
 # Flutter Boilerplate Project
 
----
-
-## Screenshots
-
----
-
 ## Technologies
 
 ### Architecture
