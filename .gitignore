@@ -39,3 +39,11 @@ app.*.symbols
 
 # Obfuscation related
 app.*.map.json
+
+pubspec.lock
+flutter_boilerplate_project.iml
+.packages
+.metadata
+private
+architecture-proposal.png
+trash
