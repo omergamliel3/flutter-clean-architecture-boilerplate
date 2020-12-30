@@ -1,4 +1,5 @@
 import 'package:sailor/sailor.dart';
+import '../presentation/index.dart';
 
 // Navigation Example: Routes.sailor.navigate(Pages.HOME);
 
@@ -14,13 +15,13 @@ class Routes {
     sailor.addRoute(SailorRoute(
       name: Pages.SPLASH,
       builder: (context, args, params) {
-        return null;
+        return HomeView();
       },
     ));
     sailor.addRoute(SailorRoute(
       name: Pages.HOME,
       builder: (context, args, params) {
-        return null;
+        return HomeView();
       },
     ));
   }

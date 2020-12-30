@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
       themeMode: ThemeMode.light,
       home: Container(),
       navigatorKey: Routes.sailor.navigatorKey,
+      initialRoute: Pages.SPLASH,
       onGenerateRoute: Routes.sailor.generator(),
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class HomeViewCubit extends StatelessWidget {
+class HomeView extends StatelessWidget {
   PreferredSizeWidget appBar() {
     return AppBar();
   }
