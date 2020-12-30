@@ -11,9 +11,87 @@ dependencies:
   flutter:
     sdk: flutter
 
+  # api integration (based on dio)
+  retrofit: any
+  # for logging purpose
+  logger: any
+  # network info
+  connectivity: ^0.4.9+3
+  # functional programming
+  dartz: ^0.9.2
+  # helps to compare objects
+  equatable: ^1.2.5
+  # json annotation to define annotations used by json_serializable
+  json_annotation: ^3.1.0
+  # freezed
+  freezed_annotation: ^0.12.0
+  # meta
+  meta: ^1.2.3
+  # bloc state managment
+  flutter_bloc: ^6.0.6
+  # network
+  http: ^0.12.2
+  # localization, date formatting, etc...
+  intl: ^0.16.1
+  # device native folders
+  path_provider: ^1.6.18
+  # sql database (local storage)
+  sqflite: ^1.3.1+1
+  # no sql database (local storage)
+  sembast: ^2.4.7+7
+  # url helper
+  url_launcher: ^5.7.2
+  # simple and efficient Inversion of Control container
+  kiwi: ^2.1.1
+  # code linter to improve your code
+  lint: ^1.3.0
+  # navigation managment
+  sailor: ^0.7.1
+
 dev_dependencies:
+  # tests
+  flutter_driver:
+    sdk: flutter
   flutter_test:
     sdk: flutter
+  test: any
+  # mock library
+  mockito:
+  # makes testing blocs and cubits easy
+  # built to work with bloc and mockito
+  bloc_test: ^7.1.0
+
+  # native icons & splash
+  flutter_launcher_icons: ^0.8.1
+  flutter_native_splash: ^0.1.9
+
+  # code generators
+  build_runner: ^1.10.3
+  # generate data classes
+  freezed: ^0.12.2
+  # json serialization, deserialization generator
+  json_serializable: ^3.5.0
+  # API integration generator
+  retrofit_generator: any
+  # Dependency injection generator
+  kiwi_generator: ^2.1.1
+
+# flutter icons setup
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/app/icon.png"
+
+# flutter splash screen setup
+flutter_native_splash:
+  image: assets/app/splash.png
+  color: "#FFFF00" # Yellow
+  android_disable_fullscreen: true
 
 flutter:
   uses-material-design: true
+
+  # add images, etc from assets folder
+  assets:
+    - assets/images/place_holder.jpg
+    - assets/app/icon.png

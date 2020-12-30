@@ -1,0 +1,16 @@
+include: package:lint/analysis_options.yaml
+
+linter:
+  rules:
+    public_member_api_docs: false
+    directives_ordering: false
+    type_annotate_public_apis: false
+    avoid_classes_with_only_static_members: false
+    avoid_print: false
+    constant_identifier_names: false
+    sized_box_for_whitespace: false
+
+analyzer:
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
