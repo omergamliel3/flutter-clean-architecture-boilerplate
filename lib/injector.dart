@@ -1,8 +1,13 @@
 import 'package:kiwi/kiwi.dart';
 
 import 'package:connectivity/connectivity.dart';
+import 'package:dio/dio.dart';
 
 import 'app/core/network/network_info.dart';
+import 'app/features/feature/data/api/api.dart';
+
+import 'app/features/feature/presentation/home_page/controller/cubit_controller.dart';
+import 'app/features/feature/presentation/loading_page/controller/cubit_controller.dart';
 
 part 'injector.g.dart';
 
@@ -18,21 +23,31 @@ abstract class Injector {
 
   void _configure() {
     _configureCore();
+    _configureFeatureModule();
   }
 
   // Core module
   @Register.singleton(Connectivity)
   @Register.singleton(NetworkInfoI, from: NetworkInfo)
   void _configureCore();
+
+  // Feature module
+  void _configureFeatureModule() {
+    _configureArticlesFeatureModuleInstances();
+    _configureArticlesFeatureModuleFactories();
+  }
+
+  // Register Feature module Instances
+  void _configureArticlesFeatureModuleInstances() {
+    container.registerInstance(RestClient(Dio()));
+  }
+
+  // Register Feature module Factories
+
+  @Register.factory(LoadingViewController)
+  @Register.factory(HomeViewController)
+  void _configureArticlesFeatureModuleFactories();
 }
-
-// ARTICLES FEATURE MODULE EXAMPLE
-
-// Articles Feature module
-// void _configureArticlesFeatureModule() {
-//   _configureArticlesFeatureModuleInstances();
-//   _configureArticlesFeatureModuleFactories();
-// }
 
 // Articles Feature module instances
 // void _configureArticlesFeatureModuleInstances() {

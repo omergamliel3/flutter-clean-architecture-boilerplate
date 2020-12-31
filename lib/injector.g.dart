@@ -14,4 +14,11 @@ class _$Injector extends Injector {
     container.registerSingleton<NetworkInfoI>(
         (c) => NetworkInfo(connectivity: c<Connectivity>()));
   }
+
+  @override
+  void _configureArticlesFeatureModuleFactories() {
+    final KiwiContainer container = KiwiContainer();
+    container.registerFactory((c) => LoadingViewController());
+    container.registerFactory((c) => HomeViewController(c<NetworkInfoI>()));
+  }
 }
