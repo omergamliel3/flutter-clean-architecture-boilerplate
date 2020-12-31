@@ -13,6 +13,7 @@ import 'injector.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  await Injector.setupAsync();
   Injector.setup();
   Routes.createRoutes();
   runApp(
@@ -24,8 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-        create: (_) => ThemeProvider(),
-        lazy: false,
+        create: (_) => Injector.resolve<ThemeProvider>(),
         child: BlocBuilder<ThemeProvider, ThemeState>(
           builder: (context, state) {
             return MaterialApp(
