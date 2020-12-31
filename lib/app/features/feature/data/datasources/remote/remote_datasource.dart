@@ -1,7 +1,5 @@
-import 'package:dartz/dartz.dart';
 import 'package:flutter_boilerplate_project/app/features/feature/data/api/api.dart';
 import 'package:meta/meta.dart';
-import 'package:dio/dio.dart';
 
 const ERROR_MSG = 'Something went wrong';
 
