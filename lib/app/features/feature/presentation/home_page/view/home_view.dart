@@ -18,8 +18,7 @@ class HomeView extends StatelessWidget {
   }
 
   Widget buildBody(BuildContext context) {
-    final textStyle =
-        Theme.of(context).textTheme.headline4.copyWith(color: Colors.white);
+    final textStyle = Theme.of(context).textTheme.headline4;
 
     return BlocBuilder<HomeViewController, HomeState>(
       builder: (context, state) {

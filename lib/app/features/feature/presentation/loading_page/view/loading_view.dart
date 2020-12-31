@@ -17,10 +17,7 @@ class LoadingView extends StatelessWidget {
           children: [
             Text(
               'Loading Page',
-              style: Theme.of(context)
-                  .textTheme
-                  .headline4
-                  .copyWith(color: Colors.white),
+              style: Theme.of(context).textTheme.headline4,
             ),
             const SizedBox(height: 40.0),
             BlocBuilder<LoadingViewController, LoadingState>(
