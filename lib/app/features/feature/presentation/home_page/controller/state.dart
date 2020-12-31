@@ -1,15 +1,14 @@
-// import 'package:freezed_annotation/freezed_annotation.dart';
-// import 'package:flutter/foundation.dart';
+import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-// import 'package:getx_hacker_news_api/app/core/errors/failure.dart';
-// import 'package:getx_hacker_news_api/app/domain/entities/article.dart';
+import '../../../../../core/errors/failure.dart';
 
-// part 'state.freezed.dart';
+part 'state.freezed.dart';
 
-// @freezed
-// abstract class ArticlesState with _$ArticlesState {
-//   const factory ArticlesState.initial() = Initial;
-//   const factory ArticlesState.loading() = Loading;
-//   const factory ArticlesState.success(List<Article> articles) = Success;
-//   const factory ArticlesState.error(Failure failure) = Error;
-// }
+@freezed
+abstract class HomeState with _$HomeState {
+  const factory HomeState.initial() = Initial;
+  const factory HomeState.loading() = Loading;
+  const factory HomeState.success(String connectionState) = Success;
+  const factory HomeState.error(Failure failure) = Error;
+}
