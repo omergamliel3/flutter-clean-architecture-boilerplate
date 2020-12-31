@@ -20,9 +20,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: AppConfig.APP_NAME,
-      theme: ThemeData.light(),
-      themeMode: ThemeMode.light,
-      home: Container(),
+      theme: ThemeData.dark(),
+      themeMode: ThemeMode.dark,
       navigatorKey: Routes.sailor.navigatorKey,
       initialRoute: Pages.SPLASH,
       onGenerateRoute: Routes.sailor.generator(),
