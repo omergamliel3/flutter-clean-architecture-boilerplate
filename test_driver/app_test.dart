@@ -23,7 +23,7 @@ Future<void> grantPermissions() async {
 }
 
 void main() {
-  group('NewsAPI App Test -', () {
+  group('App Test -', () {
     FlutterDriver driver;
 
     // Connect to the Flutter driver before running any tests.
