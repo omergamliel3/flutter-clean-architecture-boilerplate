@@ -1,12 +1,8 @@
 import 'package:sailor/sailor.dart';
+
 import '../features/feature/presentation/index.dart';
 
-// Navigation Example: Routes.sailor.navigate(Pages.HOME);
-
-abstract class Pages {
-  static const HOME = '/home';
-  static const SPLASH = '/splash';
-}
+part 'app_pages.dart';
 
 class Routes {
   static final sailor = Sailor();
@@ -15,7 +11,7 @@ class Routes {
     sailor.addRoute(SailorRoute(
       name: Pages.SPLASH,
       builder: (context, args, params) {
-        return HomeView();
+        return LoadingView();
       },
     ));
     sailor.addRoute(SailorRoute(
