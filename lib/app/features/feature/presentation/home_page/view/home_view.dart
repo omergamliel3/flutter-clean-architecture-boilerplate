@@ -56,7 +56,16 @@ class HomeView extends StatelessWidget {
         create: (_) => Injector.resolve<HomeViewController>(),
         child: Scaffold(
           appBar: appBar(),
-          body: buildBody(context),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              buildBody(context),
+              const SizedBox(
+                height: 50,
+              ),
+              ThemeButtons()
+            ],
+          ),
           floatingActionButton: FAB(),
         ),
       ),
