@@ -13,6 +13,7 @@ class _$Injector extends Injector {
     container.registerSingleton((c) => Connectivity());
     container.registerSingleton<NetworkInfoI>(
         (c) => NetworkInfo(connectivity: c<Connectivity>()));
+    container.registerSingleton((c) => ThemeProvider(c<Prefs>()));
   }
 
   @override

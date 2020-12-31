@@ -1,3 +1,4 @@
+import 'package:flutter_boilerplate_project/app/core/services/prefs.dart';
 import 'package:kiwi/kiwi.dart';
 
 import 'package:connectivity/connectivity.dart';
@@ -5,6 +6,8 @@ import 'package:dio/dio.dart';
 
 import 'app/core/network/network_info.dart';
 import 'app/features/feature/data/api/api.dart';
+
+import 'app/theme/theme_provider.dart';
 
 import 'app/features/feature/presentation/home_page/controller/cubit_controller.dart';
 import 'app/features/feature/presentation/loading_page/controller/cubit_controller.dart';
@@ -14,12 +17,19 @@ part 'injector.g.dart';
 abstract class Injector {
   static KiwiContainer container;
 
+  static final resolve = container.resolve;
+
   static void setup() {
-    container = KiwiContainer();
     _$Injector()._configure();
   }
 
-  static final resolve = container.resolve;
+  //! must run before setup()
+  static Future<void> setupAsync() async {
+    container = KiwiContainer();
+    final prefs = Prefs();
+    await prefs.initPrefs();
+    container.registerInstance(prefs);
+  }
 
   void _configure() {
     _configureCore();
@@ -29,6 +39,7 @@ abstract class Injector {
   // Core module
   @Register.singleton(Connectivity)
   @Register.singleton(NetworkInfoI, from: NetworkInfo)
+  @Register.singleton(ThemeProvider)
   void _configureCore();
 
   // Feature module
@@ -43,19 +54,11 @@ abstract class Injector {
   }
 
   // Register Feature module Factories
-
   @Register.factory(LoadingViewController)
   @Register.factory(HomeViewController)
   void _configureArticlesFeatureModuleFactories();
 }
 
-// Articles Feature module instances
-// void _configureArticlesFeatureModuleInstances() {
-//   container.registerInstance(
-//       RestClient(Dio(BaseOptions(contentType: "application/json"))));
-// }
-
-// Articles Feature module factories
 // @Register.factory(ArticlesRemoteDatasource)
 // @Register.factory(ArticlesLocalDatasource,
 //     from: ArticlesLocalDatasourceHiveImpl)
