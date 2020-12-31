@@ -44,26 +44,17 @@ abstract class Injector {
 
   // Feature module
   void _configureFeatureModule() {
-    _configureArticlesFeatureModuleInstances();
-    _configureArticlesFeatureModuleFactories();
+    _configureFeatureModuleInstances();
+    _configureFeatureModuleFactories();
   }
 
   // Register Feature module Instances
-  void _configureArticlesFeatureModuleInstances() {
+  void _configureFeatureModuleInstances() {
     container.registerInstance(RestClient(Dio()));
   }
 
   // Register Feature module Factories
   @Register.factory(LoadingViewController)
   @Register.factory(HomeViewController)
-  void _configureArticlesFeatureModuleFactories();
+  void _configureFeatureModuleFactories();
 }
-
-// @Register.factory(ArticlesRemoteDatasource)
-// @Register.factory(ArticlesLocalDatasource,
-//     from: ArticlesLocalDatasourceHiveImpl)
-// @Register.factory(GetLocalArticles)
-// @Register.factory(GetRemoteArticles)
-// @Register.factory(ArticlesRepository, from: ArticlesRepositoryImpl)
-// @Register.factory(ArticlesCubit)
-// void _configureArticlesFeatureModuleFactories();

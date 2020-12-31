@@ -17,7 +17,7 @@ class _$Injector extends Injector {
   }
 
   @override
-  void _configureArticlesFeatureModuleFactories() {
+  void _configureFeatureModuleFactories() {
     final KiwiContainer container = KiwiContainer();
     container.registerFactory((c) => LoadingViewController());
     container.registerFactory((c) => HomeViewController(c<NetworkInfoI>()));
