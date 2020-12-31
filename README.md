@@ -1,6 +1,6 @@
 # Flutter Boilerplate Project
 
-A Flutter clean architecture boilerplate made with Bloc, Kiwi, Sailor. Sembast
+A Flutter clean architecture boilerplate made with Bloc, Kiwi, Sailor, Sembast
 
 ## Screenshots
 
