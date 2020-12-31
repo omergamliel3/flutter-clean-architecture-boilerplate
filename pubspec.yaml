@@ -1,5 +1,5 @@
 name: flutter_boilerplate_project
-description: A clean architecture flutter boilerplate project.
+description: A Flutter clean architecture boilerplate made with Bloc, Kiwi, Sailor, Sembast.
 
 publish_to: "none"
 version: 1.0.0+1
