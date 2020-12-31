@@ -62,7 +62,9 @@ dev_dependencies:
   bloc_test: ^7.1.0
 
   # native icons & splash
+  # to run in terminal: flutter pub run flutter_launcher_icons:main
   flutter_launcher_icons: ^0.8.1
+  # to run in terminal: flutter pub pub run flutter_native_splash:create
   flutter_native_splash: ^0.1.9
 
   # code generators
