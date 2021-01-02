@@ -30,6 +30,12 @@
                 "-t",
                 "lib/main_test.dart"
             ]
+        },
+        {
+            "name": "Run all Tests",
+            "request": "launch",
+            "type": "dart",
+            "program": "./test"
         }
     ]
 }
