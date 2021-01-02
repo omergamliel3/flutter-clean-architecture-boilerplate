@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_boilerplate_project/config/app_config.dart';
 
 import 'package:flutter_boilerplate_project/injector.dart';
 
@@ -11,9 +12,10 @@ import '../../../../../core/widgets/loading_widget.dart';
 import '../widgets/widgets.dart';
 
 class HomeView extends StatelessWidget {
-  PreferredSizeWidget appBar() {
+  PreferredSizeWidget appBar(BuildContext context) {
+    final title = AppConfig.of(context).flavor.title;
     return AppBar(
-      title: const Text('HomePage'),
+      title: Text(title),
     );
   }
 
@@ -55,7 +57,7 @@ class HomeView extends StatelessWidget {
       child: BlocProvider(
         create: (_) => Injector.resolve<HomeViewController>(),
         child: Scaffold(
-          appBar: appBar(),
+          appBar: appBar(context),
           body: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
