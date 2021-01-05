@@ -4,13 +4,13 @@ import 'package:kiwi/kiwi.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:dio/dio.dart';
 
-import 'app/core/network/network_info.dart';
-import 'app/features/feature/data/api/api.dart';
+import '../app/core/network/network_info.dart';
+import '../app/features/feature/data/api/api.dart';
 
-import 'app/theme/theme_provider.dart';
+import '../app/theme/theme_provider.dart';
 
-import 'app/features/feature/presentation/home_page/controller/cubit_controller.dart';
-import 'app/features/feature/presentation/loading_page/controller/cubit_controller.dart';
+import '../app/features/feature/presentation/home_page/controller/cubit_controller.dart';
+import '../app/features/feature/presentation/loading_page/controller/cubit_controller.dart';
 
 part 'injector.g.dart';
 

@@ -7,7 +7,7 @@ import 'config/app_config.dart';
 import 'app/theme/theme.dart';
 import 'app/routes/app_routes.dart';
 
-import 'injector.dart';
+import 'di/injector.dart';
 
 class MyApp extends StatelessWidget {
   @override

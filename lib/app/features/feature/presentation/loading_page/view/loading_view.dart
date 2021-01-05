@@ -4,7 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../controller/index.dart';
 
-import '../../../../../../injector.dart';
+import '../../../../../../di/injector.dart';
 
 import '../../../../../core/widgets/index.dart';
 

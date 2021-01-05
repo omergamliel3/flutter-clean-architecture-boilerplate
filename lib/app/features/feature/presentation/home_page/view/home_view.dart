@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_boilerplate_project/config/app_config.dart';
 
-import 'package:flutter_boilerplate_project/injector.dart';
+import 'package:flutter_boilerplate_project/di/injector.dart';
 
 import '../controller/index.dart';
 
