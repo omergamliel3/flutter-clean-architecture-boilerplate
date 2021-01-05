@@ -16,7 +16,7 @@ A Flutter clean architecture boilerplate made with Bloc, Kiwi, Sailor, Sembast
 ### Front-end
 
 - **Flutter SDK**
-- **Kiwi (inversion of control)**
+- **Kiwi (dependency injection)**
 - **Sailor (navigation manager)**
 - **Bloc (state managment)**
 
