@@ -5,8 +5,7 @@ import 'package:flutter_boilerplate_project/config/app_config.dart';
 
 import 'package:flutter_boilerplate_project/injector.dart';
 
-import '../controller/cubit_controller.dart';
-import '../controller/state.dart';
+import '../controller/index.dart';
 
 import '../../../../../core/widgets/loading_widget.dart';
 import '../widgets/widgets.dart';

@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_boilerplate_project/app/features/feature/presentation/loading_page/controller/cubit_controller.dart';
-import 'package:flutter_boilerplate_project/app/features/feature/presentation/loading_page/controller/state.dart';
-import 'package:flutter_boilerplate_project/injector.dart';
+
+import '../controller/index.dart';
+
+import '../../../../../../injector.dart';
 
 import '../../../../../core/widgets/index.dart';
 
