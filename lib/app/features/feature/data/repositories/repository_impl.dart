@@ -11,7 +11,7 @@
 
 import 'package:dartz/dartz.dart';
 import 'package:flutter_boilerplate_project/app/core/errors/failure.dart';
-import 'package:flutter_boilerplate_project/app/features/feature/domain/entities/entitiy.dart';
+import 'package:flutter_boilerplate_project/app/features/feature/domain/entities/entity.dart';
 import 'package:flutter_boilerplate_project/app/features/feature/domain/repositories/repository.dart';
 
 class EntitiesRepositoryImpl implements Repository {
