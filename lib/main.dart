@@ -3,11 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'config/app_config.dart';
-import 'app/routes/app_routes.dart';
 
-import 'app/theme/theme_provider.dart';
-import 'app/theme/theme_state.dart';
 import 'app/theme/theme.dart';
+import 'app/routes/app_routes.dart';
 
 import 'injector.dart';
 
