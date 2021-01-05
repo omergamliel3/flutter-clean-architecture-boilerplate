@@ -8,7 +8,7 @@
             "type": "dart",
             "args": [
                 "-t",
-                "lib/main_dev.dart"
+                "lib/main/main_dev.dart"
             ]
         },
         {
@@ -17,7 +17,7 @@
             "type": "dart",
             "args": [
                 "-t",
-                "lib/main_prod.dart"
+                "lib/main/main_prod.dart"
             ]
         },
         {
@@ -26,7 +26,7 @@
             "type": "dart",
             "args": [
                 "-t",
-                "lib/main_test.dart"
+                "lib/main/main_test.dart"
             ]
         },
         {
