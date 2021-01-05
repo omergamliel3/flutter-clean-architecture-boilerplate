@@ -23,6 +23,7 @@ A Flutter clean architecture boilerplate made with Bloc, Kiwi, Sailor, Sembast
 ### Back-end
 
 - **Sembast**
+- **Retrofit (API integration)**
 
 # Author 🙋
 
