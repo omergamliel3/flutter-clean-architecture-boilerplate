@@ -1,4 +1,4 @@
-# Flutter Boilerplate Project
+# Flutter Clean Architecture Boilerplate
 
 A Flutter clean architecture boilerplate made with Bloc, Kiwi, Sailor, Sembast
 
