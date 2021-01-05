@@ -1,5 +1,5 @@
 import 'package:flutter_driver/driver_extension.dart';
-import 'package:flutter_boilerplate_project/main_test.dart' as app;
+import 'package:flutter_boilerplate_project/main/main_test.dart' as app;
 
 void main() {
   // This line enables the extension.

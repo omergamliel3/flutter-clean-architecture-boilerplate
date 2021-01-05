@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'config/app_config.dart';
+import '../config/app_config.dart';
 
-import 'app/theme/theme.dart';
-import 'app/routes/app_routes.dart';
+import '../app/theme/theme.dart';
+import '../app/routes/app_routes.dart';
 
-import 'di/injector.dart';
+import '../di/injector.dart';
 
 class MyApp extends StatelessWidget {
   @override
