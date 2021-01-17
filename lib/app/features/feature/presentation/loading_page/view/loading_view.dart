@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'package:flutter_boilerplate_project/localization/app_localizations.dart';
+
 import '../controller/index.dart';
 
 import '../../../../../../di/injector.dart';
@@ -18,7 +20,7 @@ class LoadingView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Loading Page',
+              AppLocalizations.of(context).translate(LOADING),
               style: Theme.of(context).textTheme.headline4,
             ),
             const SizedBox(height: 40.0),

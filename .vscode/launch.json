@@ -9,7 +9,8 @@
             "args": [
                 "-t",
                 "lib/main/main_dev.dart"
-            ]
+            ],
+            "program": "lib/main/main_dev.dart"
         },
         {
             "name": "flutter-prod",

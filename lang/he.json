@@ -1,0 +1,9 @@
+{
+  "app_title": "פרויקט פלאטר",
+  "initial_state": "מצב התחלתי",
+  "success_state": "מצב הצלחה",
+  "failure_state": "מצב כשל",
+  "loading": "טוען",
+  "connection": "חיבור",
+  "reason": "סיבה"
+}

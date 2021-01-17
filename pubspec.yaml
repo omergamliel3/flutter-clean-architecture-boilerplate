@@ -11,6 +11,9 @@ dependencies:
   flutter:
     sdk: flutter
 
+  flutter_localizations:
+    sdk: flutter
+
   # api integration (based on dio)
   retrofit: any
   # for logging purpose
@@ -31,8 +34,6 @@ dependencies:
   flutter_bloc: ^6.0.6
   # network
   http: ^0.12.2
-  # localization, date formatting, etc...
-  intl: ^0.16.1
   # device native folders
   path_provider: ^1.6.18
   # no sql database (local storage)
@@ -95,5 +96,7 @@ flutter:
 
   # add images, etc from assets folder
   assets:
+    - lang/en.json
     - assets/images/place_holder.jpg
     - assets/app/icon.png
+

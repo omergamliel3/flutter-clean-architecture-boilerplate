@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_boilerplate_project/localization/app_localizations.dart';
 
-import '../config/app_config.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../app/theme/theme.dart';
 import '../app/routes/app_routes.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
           builder: (context, state) {
             return MaterialApp(
               debugShowCheckedModeBanner: false,
-              title: AppConfig.of(context).flavor.title,
+              title: 'title',
               theme: lightThemeData(),
               darkTheme: darkThemeData(),
               themeMode: state.when(
@@ -28,6 +29,24 @@ class MyApp extends StatelessWidget {
               navigatorKey: Routes.sailor.navigatorKey,
               initialRoute: Pages.SPLASH,
               onGenerateRoute: Routes.sailor.generator(),
+              supportedLocales: const [
+                Locale('en', 'US'), // American English
+                Locale('he', 'IL'), // Israeli Hebrew
+              ],
+              localizationsDelegates: const [
+                AppLocalizations.delegate,
+                GlobalMaterialLocalizations.delegate,
+                GlobalWidgetsLocalizations.delegate,
+              ],
+              localeResolutionCallback: (locale, supportedLocales) {
+                for (final supportedLocale in supportedLocales) {
+                  if (supportedLocale.languageCode == locale.languageCode &&
+                      supportedLocale.countryCode == locale.countryCode) {
+                    return supportedLocale;
+                  }
+                }
+                return supportedLocales.first;
+              },
             );
           },
         ));

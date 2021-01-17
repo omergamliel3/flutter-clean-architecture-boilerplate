@@ -1,0 +1,9 @@
+{
+  "app_title": "Flutter Boilerplate",
+  "initial_state": "initial state",
+  "success_state": "success state",
+  "failure_state": "failure state",
+  "loading": "loading",
+  "connection": "connection",
+  "reason": "reason"
+}
