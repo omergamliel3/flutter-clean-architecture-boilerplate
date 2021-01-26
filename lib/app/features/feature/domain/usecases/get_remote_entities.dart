@@ -6,11 +6,11 @@ import '../entities/entity.dart';
 
 import '../repositories/repository.dart';
 
-class GetRemoteEntities implements UseCase<List<Entity>> {
+class GetRemoteEntities implements UseCase<List<Entity>, NoParams> {
   final Repository repository;
   GetRemoteEntities(this.repository);
   @override
-  Future<Either<Failure, List<Entity>>> call() async {
+  Future<Either<Failure, List<Entity>>> call(n) async {
     return repository.getRemoteEntities();
   }
 }
