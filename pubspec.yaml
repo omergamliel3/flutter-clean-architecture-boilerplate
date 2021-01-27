@@ -48,6 +48,8 @@ dependencies:
   sailor: ^0.7.1
   # persistent storage for simple data
   shared_preferences: ^0.5.12+4
+  # device location
+  geolocator: ^6.1.14
   
 dev_dependencies:
   # tests
