@@ -1,4 +1,3 @@
-import 'package:flutter_boilerplate_project/app/core/services/prefs.dart';
 import 'package:kiwi/kiwi.dart';
 
 import 'package:connectivity/connectivity.dart';
@@ -11,6 +10,9 @@ import '../app/theme/theme_provider.dart';
 
 import '../app/features/feature/presentation/home_page/controller/cubit_controller.dart';
 import '../app/features/feature/presentation/loading_page/controller/cubit_controller.dart';
+
+import 'package:flutter_boilerplate_project/app/core/services/location.dart';
+import 'package:flutter_boilerplate_project/app/core/services/prefs.dart';
 
 part 'injector.g.dart';
 
@@ -40,6 +42,7 @@ abstract class Injector {
   @Register.singleton(Connectivity)
   @Register.singleton(NetworkInfoI, from: NetworkInfo)
   @Register.singleton(ThemeProvider)
+  @Register.singleton(LocationServiceI, from: LocationService)
   void _configureCore();
 
   // Feature module
