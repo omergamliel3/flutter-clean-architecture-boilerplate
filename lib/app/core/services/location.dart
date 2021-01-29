@@ -1,10 +1,15 @@
 import 'package:geolocator/geolocator.dart';
 
-class LocationService {
+abstract class LocationServiceI {
+  Future<Position> getDeviceLocation();
+}
+
+class LocationService implements LocationServiceI {
   /// Determine the current position of the device.
   ///
   /// When the location services are not enabled or permissions
   /// are denied the `Future` will return null.
+  @override
   Future<Position> getDeviceLocation() async {
     try {
       bool serviceEnabled;
