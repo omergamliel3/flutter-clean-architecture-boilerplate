@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'package:flutter_dotenv/flutter_dotenv.dart' as dotenv;
+
 import 'package:flutter_boilerplate_project/config/app_config.dart';
 import 'package:flutter_boilerplate_project/config/build_flavor.dart';
 import 'package:flutter_boilerplate_project/main/main.dart';
@@ -14,6 +17,8 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Injector.setupAsync();
   Injector.setup();
+  await dotenv.load();
+  print(dotenv.env['FOO']);
   Routes.createRoutes();
   return runApp(appConfig);
 }
