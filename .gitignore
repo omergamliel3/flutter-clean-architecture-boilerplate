@@ -47,3 +47,5 @@ flutter_boilerplate_project.iml
 private
 architecture-proposal.png
 trash
+
+.env*
